@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* 通常は16pxがデフォルト✖️62.5%することでフォントサイズを決めている */
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
+}
+/* ここから下に記載していく */
+
+body{
+  color: #333333;
+  font-size: 1.6rem;   
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: white;
+}
+
+.img{
+  max-width: 100%;
+  height: auto;
+}
+ 
+  /* テキストを中央揃えにするCSS複数箇所で使う */
+.text-center{
+  text-align: center;
+}
+.music{
+  font-size: 0.8em;
+}
+.about-text{
+  margin: 1em;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.question-text{
+  text-align: center;
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
+.question-text2{
+  color: #333333;
+  text-align: center;
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
+.header{
+  max-width: 500px;
+  height: auto;
+  text-align: center;
+  margin: auto
+}
+
+.fake{
+  max-width: 100px;
+  height: auto;
+  text-align: center;
+  margin: auto
+}
+
+.logo{
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin: auto
+}
+
+.img1{
+   width: 100%;
+   height: auto;
+   text-align: center;
+   margin-top: 1em;
+   margin-bottom: 2em;
+   padding: auto;
+}
+
+.img2{
+   text-align: center;
+   padding: 21px auto;
+   margin-bottom: 2em;
+}
+
+.img3{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: auto;
+}
+
+.img4{
+    text-align: center;
+    padding: 21px auto;
+    margin-bottom: 2em;
+}
+ 
+
+.box1 {
+    margin: 4em auto;  
+    padding: 1em;
+    width: 90%; /*幅の調節*/
+    height: auto;
+    align-items: center;
+    color: #666666; /*文字色*/
+    background-color: #f7f7f7; /*背景色*/
+    border: 2px solid #ccc; /*線の太さ・色*/
+    border-radius: 8px; /*角の丸み*/ 
+}
+
+
+.box2{
+    margin: 4em auto;  
+    padding: 1em;
+    width: 90%; /*幅の調節*/
+    height: auto;
+    align-items: center;
+    color: #666666; /*文字色*/
+    background-color: #f7f7f7; /*背景色*/
+    border: 2px solid #ccc; /*線の太さ・色*/
+    border-radius: 8px; /*角の丸み*/ 
+}
+
+.music{
+  text-align: center
+}
+
+.hover01{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background:yellowgreen;
+  color: black!important;
+  border: solid 2px yellowgreen;
+  border-radius: 3px;
+  transition: .4s;
+  margin: auto;
+  font-size: 18px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 300px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+/*ホバー無し状態のスタイル＿ここまで*/
+
+/*ホバー有り状態のスタイル*/
+.hover01:hover {
+  display: block;
+  text-align: center;
+  background: #fff;
+  color: yellowgreen!important;
+}
+/*ホバー有り状態のスタイル＿ここまで*/
+
+.fas fa-play{
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.footer{
+  width: 100%;
+  background-color: #707070;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+.footer_text{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+

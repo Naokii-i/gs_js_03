@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェイクバスターズサンプル</title>
+</head>
+
+<body>
+      <!-- 　あとでhtml内のnavをいれる -->
+      
+  <!-- <div class="header"> -->
+          <img id="fake" src="img/fake.png" alt="ヘッダー画像タイトル"></div>
+  <!-- </div> -->
+
+　　
+ 
+　<br><br>
+
+  <p class="text-center">ネット上に飛び交う『悪質なデマ』や『根拠の不確かなフェイク情報』</p><br>
+  <p class="text-center">誰もが手軽に情報発信ができる時代、一歩間違えれば誰でもフェイクの『被害者』『加害者』になる可能性があります。</p><br>
+  <p class="text-center">信頼できる情報を見極めるにはどうすればいいのか？デジタル時代を生き抜くための知恵を、さまざまな分野の専門家とともに考えます</p><br>
+  <p class="text-center">まずは簡単なご意見をお聞かせください<br></p>　
+
+  <div class="music">
+    <br>
+    <p>※音楽の再生・停止</p>
+    <audio id="bgm1" preload loop>
+      <source src="audio/missingpics.mp3" type="audio/mp3">
+     </audio>
+     <!-- 音楽再生ボタン -->
+    <button id="btn-play" type="button"><i class="fas fa-play"></i></button>
+  </div>
+
+  <div class ="box1">
+        <h2 class="question-text">Q.「ワクチンを接種すると子どもに影響がある」？</h2>
+        <div class="img1">
+            <img id="p2" src="img/anti_vaccine1.png" alt="最初見せる画像">
+        </div>
+        <div class="img2">
+            <img id="p1" alt="最初隠す画像" src="img/answer_covid_19_fromcovinavi.png">
+        </div>
+        <div class="text-center">
+            <a href=""></a><input type="button" id="button1" value="はい" style="width: 10%;"/>
+            <a href="#vaccinelocation"><input type="button" id="button2" value="いいえ" style="width: 10%;"></a>
+        </div>
+  </div>
+    
+  <div class ="box2">
+        <h2 class="question-text2">Q.ワクチン接種は米国の陰謀だ？</h2>
+        <div class="img3">
+            <img id="p4" src="img/anti_vaccine2.png" alt="最初見せる画像">
+        </div>
+        <div class="img4">
+            <img id="p3" alt="最初隠す画像" src="img/answer2_fromcovinavi.png" style="width: 70%;">
+        </div>
+        <div class="text-center">
+            <a href=""></a><input type="button" id="button3" value="はい" style="width: 10%;"/>
+            <a href="#vaccinelocation"><input type="button" id="button4" value="いいえ" style="width: 10%;"></a>
+        </div>
+  </div>
+
+
+   <h3 id="vaccinelocation"></h3>
+   <a href="https://v-sys.mhlw.go.jp/search/" class="hover01">接種会場を探す</a>
+
+
+   <div class="footer">
+    <p class="footer_text">copyrights 2021 Fake Busters Japan All RIghts Reserved.</p>
+  </div>
+
+   
+ 
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+	// 初期表示を非表示にする
+	$('#p1').hide();
+
+	$("#button1").click(function() {
+		// 1秒かけて表示する
+        $("#p1").addClass("img2");
+		$("#p1").show(1000);
+        $("#p1").css('border', '10px solid #F19A9C');
+    });
+
+	$("#button1").click(function() {
+		// 1秒かけて非表示にする
+		$("#p2").hide(1000);
+	});
+
+  　$("button2").click(function(){
+    //  あとでかく
+  　})
+    //  ここから上が一問目
+
+  //    　ここから下が二問目
+   $('#p3').hide();
+
+   $("#button3").click(function() {
+    // 1秒かけて表示する
+    $("#p3").addClass("img3");
+    $("#p3").show(1000);
+    $("#p3").css('border', '10px solid #F19A9C');
+   });
+
+    $("#button3").click(function() {
+    // 1秒かけて非表示にする
+    $("#p4").hide(1000);  
+    }); 
+    $("button4").click(function(){
+    }); 
+    //  ここまで二問目
+
+    // 　ここから音楽再生
+    const bgm1 = document.querySelector("#bgm1");       // <audio>
+      const btn  = document.querySelector("#btn-play");   // <button>
+    
+      btn.addEventListener("click", ()=>{
+        // pausedがtrue=>停止, false=>再生中
+        if( ! bgm1.paused ){
+          btn.innerHTML = '<i class="fas fa-play"></i>';  // 「再生ボタン」に切り替え
+          bgm1.pause();
+        }
+        else{
+          btn.innerHTML = '<i class="fas fa-pause"></i>';  // 「一時停止ボタン」に切り替え
+          bgm1.play();
+        }
+      });
+    
+      /**
+       * [event] 再生終了時に実行*/
+       bgm1.addEventListener("ended", ()=>{
+       btn.innerHTML = '<i class="fas fa-play"></i>';  // 「再生ボタン」に変更
+      });
+
+</script>
+</html>
